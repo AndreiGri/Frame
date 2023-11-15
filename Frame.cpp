@@ -12,28 +12,28 @@ int main()
 
     cout << endl;
 
-    int width, height;
-    char c1 = '|';
-    char c2 = '-';
+    int width, height;                                                          // Переменные для записи ширины и высоты
+    char c1 = '|';                                                              // Переменная символа
+    char c2 = '-';                                                              // Переменная символа
 
-    cout << " Введите ширину и высоту рамки: ";
-    cin >> width >> height;
+    cout << " Введите ширину и высоту рамки: ";                                 // Запрос данных
+    cin >> width >> height;                                                     // Запись данных в переменные
 
-    for (int row = 1; row <= height; row++) {
-        for (int col = 1; col <= width; col++) {
-            if (col == 1 || col == width) {
+    for (int row = 1; row <= height; row++) {                                   // Цикл по строкам до величины высоты
+        for (int col = 1; col <= width; col++) {                                // Цикл по столбцам до величины ширины
+            if (col == 1 || col == width) {                                     // Если столбец первый или последний то выводим символ '|'
                 cout << c1;
             }
-            else {
-                if ((row == 1 || row == height) && (col > 1 && col < width)) {
-                    cout << c2;
+            else {                                                              // Иначе
+                if ((row == 1 || row == height) && (col > 1 && col < width)) {  // Если строка первая или последняя и столбец не первый и не последний
+                    cout << c2;                                                 // Выводим символ '-'
                 }
-                else {
+                else {                                                          // Иначе выводим пробел
                     cout << " ";
                 }
             }
         }
-        cout << "\n";
+        cout << "\n";                                                           // По окончании вложенного цикла переходим на новую строку
     }
 
 
