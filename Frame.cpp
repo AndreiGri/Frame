@@ -8,7 +8,7 @@ int main()
     // Изменение кодировки терминала:
     system("chcp 1251 > nul");
     // Установка цвета фона терминала и цвета текста
-    system("color 1F");
+    system("color 80");
 
     cout << endl;
 
